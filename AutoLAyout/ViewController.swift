@@ -17,24 +17,15 @@ class ViewController: UIViewController {
     var prevValue: Double = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-//        resultLabel.font.withSize(UIScreen.main.bounds.height/9)
     }
     
     @IBAction func operationButtonAction(_ sender: UIButton) {
         if prevValue == 0 {
-//        if resultLabel.text != "0" {
-//            if input1 == 0 {
                 input1 = Double(resultLabel.text!)!
-//            }else {
-//                input2 = Double(resultLabel.text!)!
-//            }
-//        }
         }else {
             input1 = prevValue
         }
         operatorInput = (sender.titleLabel?.text)!
-        
-//        resultLabel.text = "0"
     }
     
     @IBAction func percentageButtonAction(_ sender: UIButton) {
@@ -43,6 +34,7 @@ class ViewController: UIViewController {
         clearValues()
         flag = 1
     }
+    
     @IBAction func inputButtonAction(_ sender: UIButton) {
         prevValue = 0
         if flag == 1 {
@@ -74,6 +66,7 @@ class ViewController: UIViewController {
         clearValues()
         flag = 1
     }
+    
     @IBAction func equalButtonAction(_ sender: UIButton) {
         performOperation()
     }
